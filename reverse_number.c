@@ -24,5 +24,6 @@ int main() {
     }
 
     printf("Nombre inversé : %d\n", reversed);
+    
     return 0;
 }
