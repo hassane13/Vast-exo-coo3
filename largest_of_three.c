@@ -3,7 +3,6 @@
 int main() {
     int a, b, c;
 
-    printf("Entrez trois entiers : ");
     scanf("%d %d %d", &a, &b, &c);
 
     if (a >= b && a >= c) {
