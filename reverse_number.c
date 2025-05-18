@@ -20,7 +20,6 @@ int main() {
     }
 
    printf("Nombre inversé : %d\n", reversed);
-   fflush(stdout);
 
 
     return 0;
