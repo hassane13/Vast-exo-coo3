@@ -10,7 +10,7 @@ int main() {
         n = -n;
     }
 
-    while (n != 0) {
+    while (n > 0) {
         reversed = reversed * 10 + (n % 10);
         n /= 10;
     }
