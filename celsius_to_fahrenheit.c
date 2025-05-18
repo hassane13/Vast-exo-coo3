@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    float celsius, fahrenheit;
+    float celsiusn, fahrenheit;
 
     scanf("%f", &celsius);
 
