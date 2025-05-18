@@ -7,8 +7,7 @@ int main() {
 
     fahrenheit = (celsius * 9 / 5) + 32;
 
-    // Suppression des caractères spéciaux ° pour éviter les erreurs
-    printf("%.1f C equivaut a %.1f F\n", celsius, fahrenheit);
+    printf("%.1f°C équivaut à %.1f°F\n", celsius, fahrenheit);
 
     return 0;
 }
