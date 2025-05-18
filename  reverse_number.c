@@ -2,8 +2,6 @@
 
 int main() {
     int n, reversed = 0;
-
-    printf("Entrez un entier : ");
     scanf("%d", &n);
 
     int original = n;
@@ -24,7 +22,7 @@ int main() {
         reversed = -reversed;
     }
 
-    printf("Nombre inversé : %d\n", reversed);
+    printf("Nombre inverse : %d\n", reversed);
 
     return 0;
 }
