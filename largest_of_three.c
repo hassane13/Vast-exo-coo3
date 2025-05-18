@@ -6,7 +6,7 @@ int main() {
     scanf("%d %d %d", &a, &b, &c);
 
     if (a >= b && a >= c) {
-        printf("Le plus grand nombre est : %d\n", a);
+        printf("Le plus grand nombre est : %d\neee", a);
     } else if (b >= a && b >= c) {
         printf("Le plus grand nombre est : %d\n", b);
     } else {
