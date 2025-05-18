@@ -19,7 +19,7 @@ int main() {
         reversed = -reversed;
     }
 
-   printf("Nombre inversé : %d\n", reversed);
+    printf("Nombre inversé : %d\n", reversed);
 
 
     return 0;
