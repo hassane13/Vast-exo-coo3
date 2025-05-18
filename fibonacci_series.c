@@ -6,7 +6,7 @@ int main() {
     scanf("%d", &limit);
 
     while (a <= limit) {
-        printf("%d", a);
+        printf("%d ", a);
         next = a + b;
         a = b;
         b = next;

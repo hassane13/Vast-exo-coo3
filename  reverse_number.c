@@ -22,7 +22,7 @@ int main() {
         reversed = -reversed;
     }
 
-    printf("Nombre inverse : %d\n", reversed);
+    printf("%d\n", reversed);
 
     return 0;
 }
