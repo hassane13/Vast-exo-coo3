@@ -4,9 +4,6 @@ int main() {
     int n, reversed = 0;
     scanf("%d", &n);
 
-    int original = n;
-
-    // Gérer les entiers négatifs
     int negatif = 0;
     if (n < 0) {
         negatif = 1;
@@ -22,7 +19,7 @@ int main() {
         reversed = -reversed;
     }
 
-    printf("Nombre inverse : %d\n", reversed);
+    printf("%d\n", reversed);
 
     return 0;
 }
