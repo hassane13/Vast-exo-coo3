@@ -6,7 +6,7 @@ int main() {
     scanf("%d", &limit);
 
     while (a <= limit) {
-        printf("%d", a);
+        printf("%d ", a);  // Ajout d'un espace après chaque nombre
         next = a + b;
         a = b;
         b = next;
