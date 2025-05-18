@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int limit, a = 0, b = 1, next;
+    int limitn, a = 0, b = 1, next;
 
     scanf("%d", &limit);
 
