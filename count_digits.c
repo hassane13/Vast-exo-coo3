@@ -18,8 +18,7 @@ int main() {
         }
     }
 
-    printf("%d contient %d chiffre(s)\n", original, count);
-
+    printf("%d contient %d chiffre(s).\n", original, count);
 
     return 0;
 }
