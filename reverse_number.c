@@ -4,9 +4,7 @@ int main() {
     int n, reversed = 0;
     scanf("%d", &n);
 
-    int negatif = 0;
     if (n < 0) {
-        negatif = 1;
         n = -n;
     }
 
@@ -19,11 +17,6 @@ int main() {
         }
     }
 
-    if (negatif) {
-        reversed = -reversed;
-    }
-
     printf("%d\n", reversed);
-
     return 0;
 }
