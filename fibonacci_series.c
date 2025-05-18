@@ -5,8 +5,15 @@ int main() {
 
     scanf("%d", &limit);
 
+    int first = 1;  // Pour gérer l'affichage des espaces
+
     while (a <= limit) {
-        printf("%d ", a);  // Ajout d'un espace après chaque nombre
+        if (!first) {
+            printf(" ");
+        }
+        printf("%d", a);
+        first = 0;
+
         next = a + b;
         a = b;
         b = next;
