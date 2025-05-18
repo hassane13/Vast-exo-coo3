@@ -7,20 +7,16 @@ int main() {
     int negatif = 0;
     if (n < 0) {
         negatif = 1;
-        n = -n; // Prendre la valeur absolue pour inverser
+        n = -n;
     }
 
-    if (n == 0) {
-        reversed = 0;
-    } else {
-        while (n != 0) {
-            reversed = reversed * 10 + (n % 10);
-            n /= 10;
-        }
+    while (n != 0) {
+        reversed = reversed * 10 + (n % 10);
+        n /= 10;
     }
 
     if (negatif) {
-        reversed = -reversed; // Remettre le signe négatif si besoin
+        reversed = -reversed;
     }
 
     printf("Nombre inversé : %d\n", reversed);
