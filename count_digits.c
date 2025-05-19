@@ -24,7 +24,7 @@ int main() {
     }
 
     // Afficher le résultat : combien de chiffres contient le nombre original
-    printf("%d contient %d chiffre(s) .\n", original, count);
+    printf("%d contient %d chiffre(s).\n", original, count);
 
     return 0;
 }
