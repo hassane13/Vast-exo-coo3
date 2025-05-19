@@ -30,7 +30,7 @@ int main() {
 
     // Remettre le signe négatif si le nombre original était négatif
     if (original < 0) {
-        reversed = - reversed;
+        reversed = -reversed;
     }
 
     // Afficher le résultat final avec le texte demandé
