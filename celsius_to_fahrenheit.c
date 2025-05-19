@@ -4,13 +4,13 @@ int main() {
     float celsius, fahrenheit;
 
     // Lire la température en degrés Celsius depuis l'entrée standard
-    // Vérifier que la saisie est correcte (un nombre flottant)
+    // Vérifier que la saisie est correcte
     if (scanf("%f", &celsius) != 1) {
         // En cas d'erreur de saisie, terminer le programme avec un code d'erreur
         return 1;
     }
 
-    // Convertir Celsius en Fahrenheit avec la formule : (C * 9/5) + 32
+    // Convertir la température de Celsius en Fahrenheit
     // Utilisation de 9.0 et 5.0 pour forcer la division flottante
     fahrenheit = (celsius * 9.0f / 5.0f) + 32.0f;
 
