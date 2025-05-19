@@ -29,5 +29,7 @@ int main() {
 
     // Afficher le résultat final
     printf("Nombre inversé : %d\n", reversed);
+    fflush(stdout);
+
     return 0;
 }
