@@ -3,41 +3,33 @@
 int main() {
     int n, reversed = 0;
 
-    // Demander à l'utilisateur d'entrer un entier
-    printf("Entrez un entier : ");
+    // Lire un entier depuis l'entrée standard
+    scanf("%d", &n);
 
-    // Lire l'entier depuis l'entrée standard et vérifier la réussite de la lecture
-    if (scanf("%d", &n) != 1) {
-        printf("Erreur de lecture.\n");
-        return 1; // Fin du programme en cas d'erreur de saisie
-    }
-
-    int original = n; // Sauvegarder la valeur originale pour gérer le signe plus tard
+    int original = n; // Conserver la valeur originale pour savoir si le nombre était négatif
 
     // Si le nombre est négatif, on travaille avec sa valeur absolue
-    if (n < 0) {
-        n = -n;
+    if (n < 0) n = -n;
+
+    // Si le nombre est zéro, l'inverse est aussi zéro
+    if (n == 0) {
+        reversed = 0;
+    } else {
+        // Boucle pour inverser les chiffres du nombre
+        while (n != 0) {
+            // Ajouter le dernier chiffre à la droite du nombre inversé
+            reversed = reversed * 10 + (n % 10);
+            // Retirer le dernier chiffre du nombre original
+            n /= 10;
+        }
     }
 
-    // Boucle pour inverser les chiffres du nombre
-    while (n != 0) {
-        // Extraire le dernier chiffre de n (n % 10)
-        int digit = n % 10;
+    // Si le nombre original était négatif, remettre le signe négatif
+    if (original < 0) reversed = -reversed;
 
-        // Ajouter ce chiffre à la fin du nombre inversé
-        reversed = reversed * 10 + digit;
-
-        // Retirer le dernier chiffre de n
-        n /= 10;
-    }
-
-    // Remettre le signe négatif si le nombre original était négatif
-    if (original < 0) {
-        reversed = -reversed;
-    }
-
-    // Afficher le nombre inversé
+    // Afficher le résultat final
     printf("Nombre inversé : %d\n", reversed);
+    fflush(stdout);
 
     return 0;
 }
