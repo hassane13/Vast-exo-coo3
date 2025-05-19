@@ -14,5 +14,6 @@ int main() {
     // Afficher le résultat avec caractère degré codé pour éviter problème d'encodage
     printf("%.1f\xB0C équivaut à %.1f\xB0F\n", celsius, fahrenheit);
 
+
     return 0;
 }
