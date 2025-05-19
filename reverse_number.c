@@ -4,32 +4,31 @@ int main() {
     int n, reversed = 0;
 
     // Lire un entier depuis l'entrée standard
-    scanf("%d", &n);
-
-    int original = n; // Conserver la valeur originale pour savoir si le nombre était négatif
-
-    // Si le nombre est négatif, on travaille avec sa valeur absolue
-    if (n < 0) n = -n;
-
-    // Si le nombre est zéro, l'inverse est aussi zéro
-    if (n == 0) {
-        reversed = 0;
-    } else {
-        // Boucle pour inverser les chiffres du nombre
-        while (n != 0) {
-            // Ajouter le dernier chiffre à la droite du nombre inversé
-            reversed = reversed * 10 + (n % 10);
-            // Retirer le dernier chiffre du nombre original
-            n /= 10;
-        }
+    if (scanf("%d", &n) != 1) {
+        // En cas d'erreur de saisie, on termine le programme
+        return 1;
     }
 
-    // Si le nombre original était négatif, remettre le signe négatif
-    if (original < 0) reversed = -reversed;
+    int original = n;  // Sauvegarder la valeur originale pour gérer le signe
 
-    // Afficher le résultat final
+    // Travailler sur la valeur absolue pour inverser les chiffres
+    if (n < 0) {
+        n = -n;
+    }
+
+    // Inverser les chiffres du nombre
+    while (n != 0) {
+        reversed = reversed * 10 + (n % 10);
+        n /= 10;
+    }
+
+    // Remettre le signe négatif si nécessaire
+    if (original < 0) {
+        reversed = -reversed;
+    }
+
+    // Afficher le résultat avec le texte demandé
     printf("Nombre inversé : %d\n", reversed);
-    fflush(stdout);
 
     return 0;
 }
