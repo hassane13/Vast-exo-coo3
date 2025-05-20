@@ -14,7 +14,7 @@ int main() {
         // b est plus grand ou égal aux deux autres
         printf("Le plus grand nombre est : %d\n", b);
     } else {
-        // c est le plus grand
+        // c est le plus grand        
         printf("Le plus grand nombre est : %d\n", c);
     }
 
