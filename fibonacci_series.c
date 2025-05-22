@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+// Affiche la suite de Fibonacci jusqu'à une limite donnée
+
 int main() {
     int limit, a = 0, b = 1, next;
     int first = 1;
@@ -7,13 +9,18 @@ int main() {
     // Lire la valeur limite
     scanf("%d", &limit);
 
-    // Générer et afficher la suite de Fibonacci jusqu’à la limite
+    // Si la limite est négative, ne rien faire
+    if (limit < 0) {
+        return 0;
+    }
+
+    // Affichage de la suite
     while (a <= limit) {
         if (first) {
-            printf("%d", a); // Affiche le premier nombre sans espace
+            printf("%d", a);
             first = 0;
         } else {
-            printf(" %d", a); // Affiche les nombres suivants avec un espace devant
+            printf(" %d", a);
         }
 
         next = a + b;
@@ -21,6 +28,6 @@ int main() {
         b = next;
     }
 
-    printf("\n"); // Saut de ligne final
+    printf("\n");
     return 0;
 }
