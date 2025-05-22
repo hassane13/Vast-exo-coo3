@@ -6,12 +6,13 @@
  * Fonctionnement :
  * 1. Lit une limite depuis l'entrée standard
  * 2. Génère tous les nombres de Fibonacci <= à cette limite
- * 3. Affiche les nombres séparés par des espaces
+ * 3. Affiche "Fibonacci : " suivi des nombres séparés par des espaces
  * 
- * Exemple : pour limit=20, affiche "0 1 1 2 3 5 8 13"
+ * Exemple : pour limit=20, affiche "Fibonacci : 0 1 1 2 3 5 8 13"
  */
 
 #include <stdio.h>
+#include <limits.h>  // Pour INT_MAX
 
 int main() {
     int limit;        // Limite supérieure pour la série de Fibonacci
@@ -25,10 +26,13 @@ int main() {
         return 1; // Code d'erreur si la saisie est invalide
     }
     
+    // Affichage du préfixe "Fibonacci : " (toujours affiché, même si limite < 0)
+    printf("Fibonacci : ");
+    
     // Cas particulier : limite négative
     // Dans ce cas, aucun nombre de Fibonacci n'est <= limite négative
     if (limit < 0) {
-        printf("\n"); // Affiche juste une ligne vide
+        printf("\n"); // Affiche juste une ligne vide après le préfixe
         return 0;
     }
     
@@ -46,8 +50,17 @@ int main() {
         // Marquer que le premier terme a été affiché
         first = 0;
         
+        // PROTECTION CONTRE LE DÉPASSEMENT D'ENTIER
+        // Vérifier si l'addition va causer un dépassement
+        if (a > INT_MAX - b) {
+            // Si a + b dépasserait INT_MAX, on s'arrête
+            break;
+        }
+        
         // Calcul du terme suivant selon la formule : F(n) = F(n-1) + F(n-2)
         next = a + b;  // Nouveau terme = somme des deux précédents
+        
+        // Passage au terme suivant
         a = b;         // Le second devient le premier
         b = next;      // Le nouveau devient le second
     }
