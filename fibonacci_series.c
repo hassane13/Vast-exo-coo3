@@ -15,7 +15,7 @@ int main() {
     // Boucle pour générer la série Fibonacci jusqu'à la limite
     while (a <= limit) {
         if (!first) {
-            printf(" "); // Ajouter un espace avant chaque nombre sauf le premier
+            printf( " " ); // Ajouter un espace avant chaque nombre sauf le premier
         }
         printf("%d", a);
         first = 0;
