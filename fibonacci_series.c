@@ -15,10 +15,10 @@ int main() {
         b = next;
 
         if (a <= limit) {
-            printf(" ");  // espace entre les nombres sauf après le dernier
+            printf(" ");  // Espace uniquement s’il y a un autre nombre à afficher
         }
     }
 
-    printf("\n");  // saut de ligne final sans espace
+    printf("\n");  // saut de ligne final
     return 0;
 }
