@@ -2,18 +2,18 @@
 
 int main() {
     int limit, a = 0, b = 1, next;
-    int first = 1; // pour éviter d’afficher un espace avant le premier nombre
+    int first = 1;
 
-    // Lire la limite maximum
+    // Lire la valeur limite
     scanf("%d", &limit);
 
-    // Affichage de la suite de Fibonacci jusqu'à la limite
+    // Générer et afficher la suite de Fibonacci jusqu’à la limite
     while (a <= limit) {
         if (first) {
-            printf("%d", a);
+            printf("%d", a); // Affiche le premier nombre sans espace
             first = 0;
         } else {
-            printf(" %d", a); // espace avant les nombres suivants
+            printf(" %d", a); // Affiche les nombres suivants avec un espace devant
         }
 
         next = a + b;
@@ -21,6 +21,6 @@ int main() {
         b = next;
     }
 
-    printf("\n"); // saut de ligne final
+    printf("\n"); // Saut de ligne final
     return 0;
 }
