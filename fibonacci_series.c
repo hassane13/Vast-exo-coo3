@@ -1,37 +1,34 @@
 #include <stdio.h>
 
 int main() {
-    int limit;      // Valeur limite jusqu'où afficher la série
+    int limit;      // Limite maximale jusqu'à laquelle afficher la série
     int a = 0;      // Premier terme de la série Fibonacci
     int b = 1;      // Deuxième terme de la série Fibonacci
-    int next;       // Terme suivant calculé
-    int first = 1;  // Indicateur pour éviter l'espace avant le premier nombre
+    int next;       // Terme suivant dans la série
+    int first = 1;  // Indicateur pour savoir si on affiche le premier terme (pas d'espace avant)
 
-    // Lire la valeur limite depuis l'entrée standard
+    // Lire la limite depuis l'entrée standard
     if (scanf("%d", &limit) != 1) {
-        // Si la lecture échoue, on quitte avec un code d'erreur
+        // En cas d'erreur de saisie, quitter avec code d'erreur 1
         return 1;
     }
 
-    // Tant que le terme courant est inférieur ou égal à la limite, on l'affiche
+    // Boucle tant que le terme courant est inférieur ou égal à la limite
     while (a <= limit) {
         if (!first) {
-            // Ajouter un espace avant tous les nombres sauf le premier
+            // Pour tous les termes sauf le premier, afficher un espace avant le nombre
             printf(" ");
         }
-        // Afficher le terme courant
         printf("%d", a);
         first = 0;
 
-        // Calculer le terme suivant de la série
+        // Calculer le terme suivant
         next = a + b;
-
-        // Mettre à jour les termes pour la prochaine itération
         a = b;
         b = next;
     }
 
-    // Afficher un saut de ligne à la fin de la série
+    // Afficher un saut de ligne final
     printf("\n");
 
     return 0;
