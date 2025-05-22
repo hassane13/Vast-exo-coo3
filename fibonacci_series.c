@@ -3,9 +3,10 @@
 int main() {
     int limit, a = 0, b = 1, next;
 
+    // Lire la limite maximum
     scanf("%d", &limit);
 
-    // Afficher la suite de Fibonacci jusqu'à la limite avec un format propre
+    // Affichage de la suite de Fibonacci jusqu'à la limite
     while (a <= limit) {
         printf("%d", a);
 
@@ -18,6 +19,6 @@ int main() {
         }
     }
 
-    printf("\n");  // saut de ligne sans espace
+    printf("\n");  // saut de ligne final sans espace
     return 0;
 }
