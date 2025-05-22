@@ -5,16 +5,16 @@
 int main() {
     int limit, a = 0, b = 1, next;
     int first = 1;
+    int printed = 0;  // indique si au moins un nombre a été affiché
 
-    // Lire la valeur limite
+    // Lire la limite
     scanf("%d", &limit);
 
-    // Si la limite est négative, ne rien faire
+    // Cas négatif : ne rien afficher, même pas \n
     if (limit < 0) {
         return 0;
     }
 
-    // Affichage de la suite
     while (a <= limit) {
         if (first) {
             printf("%d", a);
@@ -22,12 +22,15 @@ int main() {
         } else {
             printf(" %d", a);
         }
-
+        printed = 1;
         next = a + b;
         a = b;
         b = next;
     }
 
-    printf("\n");
+    if (printed) {
+        printf("\n");
+    }
+
     return 0;
 }
